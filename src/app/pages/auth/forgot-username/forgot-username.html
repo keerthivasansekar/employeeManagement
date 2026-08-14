@@ -1,0 +1,33 @@
+<mat-card class="auth-card">
+  <mat-card-header>
+    <mat-card-title>Forgot Username</mat-card-title>
+    <mat-card-subtitle>Enter your registered email address to receive your username</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form [formGroup]="forgotUsernameForm" (ngSubmit)="onSubmit()" class="auth-form">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Registered Email</mat-label>
+        <input matInput type="email" formControlName="email" placeholder="name@example.com" required />
+        <mat-icon matPrefix>email</mat-icon>
+        @if (forgotUsernameForm.get('email')?.hasError('required')) {
+          <mat-error>Email is required</mat-error>
+        }
+        @if (forgotUsernameForm.get('email')?.hasError('email')) {
+          <mat-error>Please enter a valid email address</mat-error>
+        }
+      </mat-form-field>
+
+      <div class="form-actions-link">
+        <a routerLink="/auth/login" class="back-link">
+          <mat-icon inline>arrow_back</mat-icon> Back to Sign In
+        </a>
+      </div>
+
+      <button mat-flat-button type="submit" class="submit-btn" [disabled]="forgotUsernameForm.invalid">
+        Send Username
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>
+

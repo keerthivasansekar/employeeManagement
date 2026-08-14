@@ -1,0 +1,28 @@
+.admin-container {
+  height: 100vh;
+  background-color: var(--mat-sys-background);
+  color: var(--mat-sys-on-background);
+}
+
+.admin-sidenav {
+  width: 260px;
+  background-color: var(--mat-sys-surface-container);
+  border-right: 1px solid var(--mat-sys-outline-variant);
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
+.admin-content-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--mat-sys-surface-container-low);
+}
+
+.admin-main-body {
+  flex: 1;
+  padding: 24px;
+  background-color: var(--mat-sys-surface-container-low);
+  color: var(--mat-sys-on-surface);
+  overflow-y: auto;
+}

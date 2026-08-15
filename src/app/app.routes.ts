@@ -17,12 +17,12 @@ export const routes: Routes = [
         ]
     },
     {
-        path: '',
+        path: 'admin',
         component: MainLayout, 
         children: [
             { path: 'dashboard', component: Dashboard },
         ]
     },
-    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-    { path: '**', redirectTo: '/auth/login', pathMatch: 'full' }
+    { path: '', redirectTo: 'admin/dashboard', pathMatch: 'full' },
+    { path: '**', redirectTo: 'auth/login', pathMatch: 'full' }
 ];

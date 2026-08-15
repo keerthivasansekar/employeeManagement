@@ -1,0 +1,72 @@
+.logo-container {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--mat-sys-primary);
+  }
+
+  .logo-icon {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    color: var(--mat-sys-primary);
+  }
+
+  .logo-text {
+    font: var(--mat-sys-title-large);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--mat-sys-on-surface);
+    transition: opacity 0.2s ease;
+  }
+
+  &.collapsed {
+    padding: 0;
+    justify-content: center;
+
+    .logo-wrapper {
+      gap: 0;
+    }
+  }
+}
+
+.sidenav-menu {
+  padding-top: 8px;
+
+  .nav-item {
+    margin: 4px 8px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: var(--mat-sys-surface-container-high);
+    }
+
+    &.active {
+      background-color: var(--mat-sys-primary-container);
+      color: var(--mat-sys-on-primary-container);
+
+      mat-icon {
+        color: var(--mat-sys-on-primary-container);
+      }
+    }
+  }
+
+  &.collapsed {
+    .nav-item {
+      margin: 4px 4px;
+      padding: 0;
+    }
+  }
+}

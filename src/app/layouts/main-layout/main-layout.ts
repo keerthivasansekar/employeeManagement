@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from '../partials/header/header';
 import { Sidenav } from '../partials/sidenav/sidenav';
 import { Footer } from '../partials/footer/footer';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { SidenavService } from '../../services/sidenav/sidenav-service';
 
 @Component({
   selector: 'app-main-layout',
@@ -12,4 +13,7 @@ import { MatListModule } from '@angular/material/list';
   templateUrl: './main-layout.html',
   styleUrl: './main-layout.scss',
 })
-export class MainLayout {}
+export class MainLayout {
+  public sidenavService = inject(SidenavService);
+}
+

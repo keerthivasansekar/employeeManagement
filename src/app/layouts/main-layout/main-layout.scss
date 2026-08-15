@@ -10,12 +10,31 @@
   border-right: 1px solid var(--mat-sys-outline-variant);
   box-sizing: border-box;
   border-radius: 0;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-x: hidden;
+
+  &.collapsed {
+    width: 70px;
+  }
+}
+
+/* Smooth transition for mat-drawer content and inner container */
+::ng-deep {
+  .mat-drawer-inner-container {
+    overflow-x: hidden !important;
+  }
+
+  .mat-drawer-content {
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                margin-right 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
 }
 
 .admin-content-layout {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
+  box-sizing: border-box;
   background-color: var(--mat-sys-surface-container-low);
 }
 
@@ -25,4 +44,6 @@
   background-color: var(--mat-sys-surface-container-low);
   color: var(--mat-sys-on-surface);
   overflow-y: auto;
+  transition: padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+

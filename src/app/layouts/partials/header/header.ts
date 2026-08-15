@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
+import { SidenavService } from '../../../services/sidenav/sidenav-service';
 @Component({
   selector: 'app-header',
   imports: [MatToolbarModule, MatIconModule, MatButtonModule],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
-export class Header {}
+export class Header {
+  public sidenavService = inject(SidenavService);
+}
+

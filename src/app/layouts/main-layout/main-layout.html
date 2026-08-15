@@ -1,5 +1,5 @@
-<mat-sidenav-container class="admin-container">
-    <mat-sidenav mode="side" opened class="admin-sidenav">
+<mat-sidenav-container class="admin-container" autosize>
+    <mat-sidenav mode="side" opened class="admin-sidenav" [class.collapsed]="sidenavService.isCollapsed()">
         <app-sidenav></app-sidenav>
     </mat-sidenav>
     <mat-sidenav-content class="admin-content-layout">

@@ -1,1 +1,27 @@
-<p>sidenav works!</p>
+<div class="logo-container" [class.collapsed]="sidenavService.isCollapsed()">
+  <div class="logo-wrapper">
+    <mat-icon class="logo-icon">badge</mat-icon>
+    @if (!sidenavService.isCollapsed()) {
+      <span class="logo-text">K-Employee</span>
+    }
+  </div>
+</div>
+
+<mat-nav-list class="sidenav-menu" [class.collapsed]="sidenavService.isCollapsed()">
+  @for (item of navItems; track item.route) {
+    <a
+      mat-list-item
+      [routerLink]="item.route"
+      routerLinkActive="active"
+      [matTooltip]="sidenavService.isCollapsed() ? item.label : ''"
+      matTooltipPosition="right"
+      class="nav-item"
+    >
+      <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+      @if (!sidenavService.isCollapsed()) {
+        <span matListItemTitle>{{ item.label }}</span>
+      }
+    </a>
+  }
+</mat-nav-list>
+

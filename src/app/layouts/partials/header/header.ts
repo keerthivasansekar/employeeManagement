@@ -2,8 +2,8 @@ import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { SidenavService } from '../../../services/sidenav/sidenav-service';
 import { UserInfo } from "./user-info/user-info";
+import { SidenavService } from '../../../core/services/sidenav/sidenav-service';
 @Component({
   selector: 'app-header',
   imports: [MatToolbarModule, MatIconModule, MatButtonModule, UserInfo],

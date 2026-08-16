@@ -2,9 +2,9 @@ import { Injectable, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 import { Router } from '@angular/router';
-import { environment } from '../../../environments/environment';
-import { LoginRequest, UserData } from '../../models/authModel';
-import { ApiResponse } from '../../models/apiResponseModel';
+import { LoginRequest, UserData } from '../../models/interfaces/authModel';
+import { ApiResponse } from '../../models/interfaces/apiResponseModel';
+import { environment } from '../../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',

@@ -8,9 +8,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { AuthService } from '../../../services/auth/auth-service';
-import { LoginRequest } from '../../../models/authModel';
-import { ApiResponse } from '../../../models/apiResponseModel';
+import { LoginRequest } from '../../../core/models/interfaces/authModel';
+import { ApiResponse } from '../../../core/models/interfaces/apiResponseModel';
+import { AuthService } from '../../../core/services/auth/auth-service';
 
 @Component({
   selector: 'app-login-page',

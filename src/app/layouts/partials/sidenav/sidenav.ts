@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { SidenavService } from '../../../services/sidenav/sidenav-service';
+import { SidenavService } from '../../../core/services/sidenav/sidenav-service';
 
 @Component({
   selector: 'app-sidenav',

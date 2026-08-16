@@ -5,7 +5,7 @@ import { Sidenav } from '../partials/sidenav/sidenav';
 import { Footer } from '../partials/footer/footer';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { SidenavService } from '../../services/sidenav/sidenav-service';
+import { SidenavService } from '../../core/services/sidenav/sidenav-service';
 
 @Component({
   selector: 'app-main-layout',

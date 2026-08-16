@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { AuthService } from '../../../../services/auth/auth-service';
+import { AuthService } from '../../../../core/services/auth/auth-service';
 
 @Component({
   selector: 'app-user-info',
